@@ -11,7 +11,8 @@
       "ctestCommandArgs": "",
       "cmakeToolchain": "C:/vcpkg/scripts/buildsystems/vcpkg.cmake",
       "inheritEnvironments": [ "msvc_x64_x64" ],
-      "variables": []
+      "variables": [],
+      "cmakeExecutable": "C:/Program Files/CMake/bin/cmake.exe"
     },
     {
       "name": "release",
@@ -24,7 +25,8 @@
       "ctestCommandArgs": "",
       "cmakeToolchain": "C:/vcpkg/scripts/buildsystems/vcpkg.cmake",
       "inheritEnvironments": [ "msvc_x64_x64" ],
-      "variables": []
+      "variables": [],
+      "cmakeExecutable": "C:/Program Files/CMake/bin/cmake.exe"
     }
   ]
 }

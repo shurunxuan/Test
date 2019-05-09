@@ -16,7 +16,7 @@ include_directories(${Boost_INCLUDE_DIRS})
 
 find_package(Qt5Widgets REQUIRED)
 
-add_compile_definitions(TEST_DLL_EXPORTS)
+add_compile_definitions(TEST_EXPORTS)
 
 add_library(TestLib SHARED TestLib.h TestLib.cpp)
 

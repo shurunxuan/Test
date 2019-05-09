@@ -27,10 +27,12 @@
 // TEST_LOCAL is used for non-api symbols.
 
 //#ifdef TEST_DLL // defined if TEST is compiled as a DLL
-#ifdef TEST_DLL_EXPORTS // defined if we are building the TEST DLL (instead of using it)
+#ifdef TEST_EXPORTS // defined if we are building the TEST DLL (instead of using it)
 #define TEST_API TEST_LIB_DLL_EXPORT
+#define EXPORT "EXPORTED"
 #else
 #define TEST_API TEST_LIB_DLL_IMPORT
+#define EXPORT "NOT EXPORTED"
 #endif // TEST_DLL_EXPORTS
 #define TEST_LOCAL TEST_LIB_DLL_LOCAL
 //#else // TEST_DLL is not defined: this means TEST is a static lib.
