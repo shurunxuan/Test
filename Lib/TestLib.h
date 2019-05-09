@@ -40,6 +40,20 @@
 //#define TEST_LOCAL
 //#endif // TEST_DLL
 
-int TEST_API testLib(int argc, char *argv[]);
+#include <wx/wxprec.h>
+#ifndef WX_PRECOMP
+#include <wx/wx.h>
+#endif
+
+int TEST_API testLib();
+
+
+
+class MyFrame: public wxFrame
+{
+public:
+    MyFrame(const wxString& title, const wxSize& size);
+};
+
 
 #endif //TEST_TESTLIB_H

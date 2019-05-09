@@ -1,8 +1,5 @@
 #include "../Lib/TestLib.h"
 #include <iostream>
-#include "Compiler.h"
+#include "MyApp.h"
 
-int main(int argc, char *argv[]) {
-	std::cout << CompilerString() << std::endl;
-	return testLib(argc, argv);
-}
+IMPLEMENT_APP(MyApp)

@@ -5,16 +5,12 @@
 #include "TestLib.h"
 
 #include <boost/format.hpp>
-#include <QApplication>
-#include <QDebug>
-#include <QtWidgets>
 #include <iostream>
 
-
-int testLib(int argc, char **argv)
+int testLib()
 {
-    unsigned int arr[5] = { 0x05, 0x04, 0xAA, 0x0F, 0x0D };
-	std::cout << EXPORT << std::endl;
+    unsigned int arr[5] = {0x05, 0x04, 0xAA, 0x0F, 0x0D};
+    std::cout << EXPORT << std::endl;
 
     std::cout << boost::format("%02X-%02X-%02X-%02X-%02X")
                  % arr[0]
@@ -24,15 +20,13 @@ int testLib(int argc, char **argv)
                  % arr[4]
               << std::endl;
 
-    std::cout << QT_VERSION_STR << std::endl;
-
-    QApplication app(argc, argv);
-    QWidget window;
-    window.resize(1366, 768);
-    window.show();
-    window.setWindowTitle(
-            QApplication::translate("toplevel", "Top-level widget"));
-    std::cout << window.winId() << std::endl;
-    std::cout << window.windowHandle() << std::endl;
-    return app.exec();
+    return 0;
 }
+
+MyFrame::MyFrame(const wxString &title, const wxSize &size)
+        : wxFrame(NULL, wxID_ANY, title, wxDefaultPosition, wxSize(size))
+{
+    Center();
+}
+
+
